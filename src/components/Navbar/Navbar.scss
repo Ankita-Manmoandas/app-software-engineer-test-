@@ -1,0 +1,12 @@
+.nav {
+ display: flex;
+ justify-content: space-between;
+ margin: 20px;
+
+ &__item{
+   width: 10%;
+ }
+}
+.logo {
+  width: 40%;
+}
