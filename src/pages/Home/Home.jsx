@@ -1,6 +1,3 @@
-import {useState, useEffect} from "react";
-
-import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar"
 
 const Home = () => {
@@ -9,11 +6,6 @@ const Home = () => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubTitle] = useState("");
   
-
-
-
-
-
 
   useEffect (() => {
     const URL = "https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details"
@@ -37,8 +29,8 @@ const Home = () => {
 
 
   return <>
-  <Navbar />
-  <Carousel imagesArr = {imgArr} title={title} subtitle={subtitle} />
+   <Carousel imagesArr = {imgArr} title={title} subtitle={subtitle} />
+
   
   </>
 }
