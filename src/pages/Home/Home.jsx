@@ -20,14 +20,10 @@ const Home = () => {
     fetch(URL).then(response => {
       return response.json ()
     }).then(imageObject => {
+    
     setTitle(imageObject.Details[0].Title)
     setSubTitle(imageObject.Details[2].Subtitle)
-
     setImgArr(imageObject.Details.map(image => image.ImageUrl))
- 
-  
-
-    
     })
 
   
