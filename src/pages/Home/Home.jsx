@@ -1,4 +1,8 @@
-import Navbar from "../../components/Navbar/Navbar"
+
+import {useState, useEffect} from "react";
+
+import Carousel from "../../components/Carousel/Carousel";
+
 
 const Home = () => {
   
