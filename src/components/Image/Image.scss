@@ -1,0 +1,11 @@
+.Image-border{
+  display: flex;
+  justify-content: center;
+
+
+  &__unit {
+    display: block;
+      width: 80%;
+  }
+}
+

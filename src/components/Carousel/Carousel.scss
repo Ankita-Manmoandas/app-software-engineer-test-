@@ -1,15 +1,9 @@
 .carousel {
-
-
   &__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
-
   }
- 
-
 
   &__image {
     display: block;
@@ -26,14 +20,8 @@
       cursor: pointer;
     }
   }
- 
-  &__centered{
+
+  &__centered {
     text-align: center;
-
- 
-    
-  };
- 
-
-
   }
+}
