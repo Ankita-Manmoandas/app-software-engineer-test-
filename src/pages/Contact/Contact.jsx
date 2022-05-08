@@ -1,10 +1,11 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Form from "../../components/Form/Form";
 
+
 const Contact = () => {
   return <>
 
-  <p>contact</p>
+  <h2>Contact us</h2>
   <Form /> </>
 
 }
