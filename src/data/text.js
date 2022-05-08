@@ -17,9 +17,9 @@ const placeholderText = [
   {
 
   "id":2,
-  "title": "TITLE 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "title": "TITLE 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   "subtitle": "",
-  "paragraph": "PARAGRAPH 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Diam vel quam elementum pulvinar etiam. Imperdiet massa tincidunt nunc pulvinar. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Feugiat scelerisque varius morbi enim nunc faucibus."
+  "paragraph": "PARAGRAPH 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum. Purus viverra accumsan in nisl nisi scelerisque eu ultrices."
 
 
 
