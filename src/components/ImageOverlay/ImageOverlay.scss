@@ -1,18 +1,22 @@
 .overlay {
-  margin-top: 50%;
-  height: 100%;
+  margin-top: 30%;
+  padding-bottom: 20%;
+  
+
   position: relative;
+  
 
 
  
   &__background {
-    display: block;
-    width: 100%;
+  
+   
     overflow-y: visible;
     transform: scale(1,1.7);
     object-fit: cover;
-   
+    
     width: 100%;
+    
  
     
   
@@ -20,16 +24,10 @@
  
 
   &__shadow {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   border: solid 2px solid;
+    width: 80%;
 
-  }
-
- 
-  &__header {
-    color: white;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     position: absolute;
     top: 0;
@@ -38,28 +36,34 @@
     right: 0;
     height: fit-content;
     margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+ 
+
+
+  }
+
+ 
+  &__header {
+    // color: white;
+    // text-align: center;
+    // position: absolute;
+    // top: 0;
+   
+    // left: 0;
+    // right: 0;
+    // height: fit-content;
+    // margin: auto;
   
 
   }
 
   &__paragraph {
-    color: white;
-    text-align: center;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
+   
 
 
   }
   &__button {
-    text-align: center;
-    position: absolute;
-    top: 5;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100px;
     
 
   }

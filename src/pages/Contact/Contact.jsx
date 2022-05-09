@@ -1,13 +1,13 @@
-import Navbar from "../../components/Navbar/Navbar";
 import Form from "../../components/Form/Form";
-
+import "./Contact.scss"
 
 const Contact = () => {
-  return <>
-
-  <h2>Contact us</h2>
-  <Form /> </>
-
-}
+  return (
+    <div className="contact">
+      <h2>Contact us</h2>
+      <Form />
+    </div>
+  );
+};
 
 export default Contact;

@@ -1,10 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import { useFormik } from "formik";
+import axios from "axios";
 import * as Yup from 'yup';
 import "./Form.scss"
 import contactImage from "../../assests/images/Img_Contact.png"
 
+
 const Form = () => {
+  
+     const [serverState, setServerState] = useState();
+     const handleServerResponse = (ok, msg) => {
+       setServerState({ok, msg});
+     };
+     const handleOnSubmit = (values, actions) => {
+       axios({
+         method: "POST",
+         url: "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit",
+         data: values
+       })
+         .then(response => {
+           actions.setSubmitting(false);
+           actions.resetForm();
+           handleServerResponse(true, "Thanks!");
+         })
+         .catch(error => {
+           actions.setSubmitting(false);
+           handleServerResponse(false, error.response.data.error);
+         });
+     };
+  
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -29,10 +53,12 @@ const Form = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  
   return (
     <div className="page">
 
-    <form onSubmit={formik.handleSubmit} className="form">
+    <form onSubmit={formik.handleSubmit} className="form" onSubmit = {handleOnSubmit}>
      
       <label htmlFor="fullName" className="form__label"> Full Name</label>
       <input
@@ -92,6 +118,13 @@ const Form = () => {
       ) : null}
 
       <button type="submit">Submit</button>
+      {serverState && (
+                  <p className={!serverState.ok ? "errorMsg" : ""}>
+                    {serverState.msg}
+                  </p>
+                )}
+
+      
       
     </form>
     

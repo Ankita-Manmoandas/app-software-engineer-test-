@@ -4,6 +4,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import Image from "../../components/Image/Image";
 import data from "../../data/text";
 import ImageOverlay from "../../components/ImageOverlay/ImageOverlay";
+import "./Home.scss"
 
 const Home = () => {
   const [imgArr, setImgArr] = useState([]);
@@ -45,18 +46,20 @@ const Home = () => {
  
 
   return (
-    <>
+    <div className="home">
       <Carousel imagesArr={imgArr} title={title} subtitle={subtitle} />
       <Image /> 
-      <paragraph> {data[0].title} 
+      <paragraph className="home__text"> {data[0].title} 
      {data[0].subtitle} {data[0].paragraph}</paragraph>
+     
       <ImageOverlay  header = {data[1].title} paragraph= {data[1].paragraph} />
-      <paragraph> {data[2].title} 
+
+      <paragraph className="home__text"> {data[2].title} 
      {data[2].subtitle} {data[2].paragraph}</paragraph>
      
     
 
-    </>
+    </div>
   );
 };
 

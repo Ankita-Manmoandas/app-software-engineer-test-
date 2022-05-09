@@ -9,13 +9,13 @@ const ImageOverlay = props => {
    
   <img src={backgroundImage} className="overlay__background" /> 
  
-  <div className="overlay__shadow">
+  <section className="overlay__shadow">
   <h3 className="overlay__header"> {header}</h3>
   <p className="overlay__paragraph">{paragraph} </p>
   
   <button className="overlay__button"> contact us</button>
   
-  </div>
+  </section>
   </div>
 }
 
