@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Carousel.scss";
 import leftArrow from "../../assests/images/left-arrow.png";
 import rightArrow from "../../assests/images/right-arrow.png";
+import CTAButton from "../CTAButton/CTAButton";
 
 const Carousel = (props) => {
   const { imagesArr, title, subtitle } = props;
@@ -45,6 +46,8 @@ const Carousel = (props) => {
       <div className="carousel__text">
         <h2 className="carousel__centered">{title}</h2>
         <h4 className="carousel__centered">{subtitle}</h4>
+        <CTAButton buttonText={"Contact us"} isSecondary={false}/>
+
       </div>
     </div>
   );
