@@ -33,11 +33,10 @@ const Form = () => {
       "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit",
       {
         method: "POST",
-
+        mode: 'no-cors',
         headers: {
           'Content-Type':'application/json',
-          'Access-Control-Allow-Origin':'*',
-           'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
+         
         },
         body: JSON.stringify(queries),
       }
