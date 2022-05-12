@@ -1,7 +1,10 @@
+
+@import "../../assests/sass/variables";
+
 .nav {
  display: flex;
  justify-content: space-between;
- margin: 20px;
+ margin: 5%;
 
  &__item{
    width: 10%;
@@ -9,4 +12,21 @@
 }
 .logo {
   width: 40%;
+}
+
+
+@media screen  and (min-width: $medium-screen-width) {
+  .nav {
+   
+    &__item {
+      width: 5%;
+    }
+   }
+   .logo {
+     width: 25%;
+   }
+   
+
+
+  
 }
