@@ -12,7 +12,10 @@ const CTAButton = props => {
     buttonStyle += " primary";
   }
 
-  return <button className={buttonStyle}>{buttonText}</button>;
+  return <div className="buttons">
+
+ <button className={buttonStyle}>{buttonText}</button>
+ </div>
 }
 
 export default CTAButton; 
