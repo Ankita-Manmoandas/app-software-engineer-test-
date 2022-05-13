@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-// import {Form, Formik,Field,ErrorMessage} from 'formik'
+import React, { useState } from "react"
 import { useForm } from "react-hook-form";
-import axios from "axios";
-import * as Yup from "yup";
 import "./Form.scss";
 import contactImage from "../../assests/images/Img_Contact.png";
 
