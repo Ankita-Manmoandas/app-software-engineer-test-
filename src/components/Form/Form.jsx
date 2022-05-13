@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
 import contactImage from "../../assests/images/Img_Contact.png";
+import CTAButton from "../CTAButton/CTAButton";
+
 
 const Form = () => {
   const [bIncludeAddressDetails, showbIncludeAddressDetails] = useState(false);
@@ -297,9 +299,7 @@ const Form = () => {
           </>
         )}
     
-        <button type="submit" className="form__submit">
-          Submit
-        </button>
+    <CTAButton buttonText={"submit"} isSecondary={false}/>
       </form>
       <div> 
 
