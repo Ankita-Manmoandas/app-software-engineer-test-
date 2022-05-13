@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
 import contactImage from "../../assests/images/Img_Contact.png";
@@ -8,6 +8,7 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm({
@@ -31,6 +32,7 @@ const Form = () => {
 
   const handleCheck = () => {
     showbIncludeAddressDetails(!bIncludeAddressDetails);
+    setQueries({ ...queries, bIncludeAddressDetails: true });
   };
 
   const [queries, setQueries] = useState({
@@ -50,7 +52,7 @@ const Form = () => {
   });
 
   const onSubmit = (event) => {
-    // event.preventDefault();
+    //  event.preventDefault();
     fetch(
       "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit",
       {
@@ -65,14 +67,13 @@ const Form = () => {
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
-    // event.target.reset();
+    reset();
   };
 
   return (
-    <div className="form">
-      <h2>Contact us</h2>
-
-      <form className="form__card" onSubmit={handleSubmit(onSubmit)}>
+    <div className="page">
+     
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <label className="form__label">Full Name</label>
         <input
           className="form__input"
@@ -143,13 +144,16 @@ const Form = () => {
         ></textarea>
         <p>{errors.Message?.message}</p>
 
+        <label htmlFor="myCheck"> Add address?</label>
         <input
           type="checkbox"
           name="myCheck"
           id="myCheck"
           onClick={handleCheck}
+          // onClick={() =>
+          //   setQueries({ ...queries, bIncludeAddressDetails: true })
+          // }
         />
-        <label htmlFor="myCheck"> Add address?</label>
 
         {bIncludeAddressDetails && (
           <>
@@ -292,13 +296,18 @@ const Form = () => {
             <p>{errors.Country?.message}</p>
           </>
         )}
-
-        <img src={contactImage} className="form__image" />
-
+    
         <button type="submit" className="form__submit">
           Submit
         </button>
       </form>
+      <div> 
+
+        
+
+<img src={contactImage} className="form__image"/>
+</div>
+
     </div>
   );
 };
