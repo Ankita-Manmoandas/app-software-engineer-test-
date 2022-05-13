@@ -34,3 +34,46 @@
  
   }
 }
+@media screen  and (min-width: $medium-screen-width) {
+  .carousel {
+    margin: 5%;
+
+    
+  
+    &__arrow {
+      display: block;
+      height: 30px;
+  
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    &__centered {
+      text-align: center;
+    }
+ 
+
+  
+}
+
+}
+
+
+@media screen and (min-width: $large-screen-width) {
+
+  .carousel {
+  
+  
+    &__text{
+      font-size: larger;
+     
+     
+   
+    }
+  }
+
+
+
+}

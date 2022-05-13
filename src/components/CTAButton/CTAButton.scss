@@ -1,4 +1,7 @@
 
+
+@import "../../assests/sass/variables";
+
 .buttons {
   display: flex;
   align-items: center;
@@ -23,4 +26,14 @@
 .secondary {
   background-color: whitesmoke;
   color: #307bb9;
+}
+
+
+@media screen  and (min-width:$medium-screen-width) {
+  .button {
+    font-size: larger;
+  
+  }
+
+
 }

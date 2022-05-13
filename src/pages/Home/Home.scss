@@ -1,12 +1,28 @@
-.home {
+@import "../../assests/sass/variables";
 
+.home {
   &__text {
     display: block;
     width: 85%;
     margin: auto;
     margin-top: 10%;
- 
   }
-  
-  
+}
+
+@media screen and (min-width: $medium-screen-width) {
+  .home {
+    &__text {
+      margin-top: 0;
+      font-size: larger;
+    }
+  }
+}
+
+@media screen and (min-width: $large-screen-width) {
+  .home {
+    &__text {
+      margin-top: 0;
+      font-size: x-large;
+    }
+  }
 }

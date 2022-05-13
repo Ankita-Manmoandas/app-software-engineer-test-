@@ -1,3 +1,7 @@
+
+@import "../../assests/sass/variables";
+
+
 .Image-border{
   display: flex;
   justify-content: center;
@@ -11,3 +15,17 @@
   }
 }
 
+@media screen  and (min-width: $medium-screen-width) {
+  .Image-border{
+   
+  
+  
+    &__unit {
+     
+        padding-top: 5%;
+  
+    }
+  }
+
+
+}

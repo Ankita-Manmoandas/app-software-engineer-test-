@@ -1,14 +1,39 @@
 import React, { useState } from "react";
 // import {Form, Formik,Field,ErrorMessage} from 'formik'
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import * as Yup from "yup";
 import "./Form.scss";
 import contactImage from "../../assests/images/Img_Contact.png";
 
 const Form = () => {
-  const [addressOption, showAddressOption] = useState(false);
+  const [bIncludeAddressDetails, showbIncludeAddressDetails] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      FullName: "",
+      EmailAddress: "",
+      PhoneNumbers: [""],
+      Message: "",
+      bIncludeAddressDetails: false,
+      AddressDetails: {
+        AddressLine1: "",
+        AddressLine2: "",
+        CityTown: "",
+        StateCounty: "",
+        Postcode: "",
+        Country: "",
+      },
+    },
+  });
+  // console.log('', errors)
+
   const handleCheck = () => {
-    showAddressOption(!addressOption);
+    showbIncludeAddressDetails(!bIncludeAddressDetails);
   };
 
   const [queries, setQueries] = useState({
@@ -27,16 +52,15 @@ const Form = () => {
     },
   });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (event) => {
+    // event.preventDefault();
     fetch(
       "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit",
       {
         method: "POST",
-        mode: 'no-cors',
+        mode: "cors",
         headers: {
-          'Content-Type':'application/json',
-         
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(queries),
       }
@@ -44,40 +68,64 @@ const Form = () => {
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
-    event.target.reset();
+    // event.target.reset();
   };
 
   return (
     <div className="form">
       <h2>Contact us</h2>
 
-      <form className="form__card" onSubmit={handleSubmit}>
+      <form className="form__card" onSubmit={handleSubmit(onSubmit)}>
         <label className="form__label">Full Name</label>
         <input
           className="form__input"
           type="text"
+          {...register("FullName", {
+            required: " Full name is required",
+            minLength: {
+              value: 4,
+              message: "must be at least 4 characters",
+            },
+          })}
           onInput={(event) =>
             setQueries({ ...queries, FullName: event.target.value })
           }
         />
+        <p>{errors.FullName?.message}</p>
 
         <label className="form__label">Email</label>
         <input
           className="form__input"
           type="text"
+          {...register("EmailAddress", {
+            required: "Email is required",
+            minLength: {
+              value: 4,
+              message: "must be at least 4 characters",
+            },
+          })}
           onInput={(event) =>
             setQueries({ ...queries, EmailAddress: event.target.value })
           }
         />
+        <p>{errors.EmailAddress?.message}</p>
 
         <label className="form__label">phone Number</label>
         <input
           className="form__input"
           type="number"
+          {...register("PhoneNumbers", {
+            required: "Phone Number is required",
+            minLength: {
+              min: 11,
+              message: "must be at a minimum of 11 digits",
+            },
+          })}
           onInput={(event) =>
-            setQueries({ ...queries, PhoneNumbers: event.target.value })
+            setQueries({ ...queries, PhoneNumbers: [event.target.value] })
           }
         />
+        <p>{errors.PhoneNumbers?.message}</p>
 
         <label className="form__label">Message</label>
         <textarea
@@ -85,10 +133,18 @@ const Form = () => {
           cols="30"
           className="form__input"
           type="text"
+          {...register("Message", {
+            required: "A message is required",
+            minLength: {
+              value: 4,
+              message: "must be longer than 4 characters",
+            },
+          })}
           onInput={(event) =>
-            setQueries({ ...queries, message: event.target.value })
+            setQueries({ ...queries, Message: event.target.value })
           }
         ></textarea>
+        <p>{errors.Message?.message}</p>
 
         <input
           type="checkbox"
@@ -98,12 +154,19 @@ const Form = () => {
         />
         <label htmlFor="myCheck"> Add address?</label>
 
-        {addressOption && (
+        {bIncludeAddressDetails && (
           <>
             <label className="form__label">Address line 1</label>
             <input
               className="form__input"
               type="text"
+              {...register("AddressLine1", {
+                required: "Address is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -114,11 +177,19 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.AddressLine1?.message}</p>
 
             <label className="form__label">Address line 2</label>
             <input
               className="form__input"
               type="text"
+              {...register("AddressLine2", {
+                required: "Address is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -129,11 +200,19 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.AddressLine2?.message}</p>
 
             <label className="form__label">City</label>
             <input
               className="form__input"
               type="text"
+              {...register("City", {
+                required: "City is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -144,11 +223,19 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.CityTown?.message}</p>
 
             <label className="form__label">State </label>
             <input
               className="form__input"
               type="text"
+              {...register("State", {
+                required: "State is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -159,11 +246,19 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.State?.message}</p>
 
             <label className="form__label">postcode </label>
             <input
               className="form__input"
               type="text"
+              {...register("Postcode", {
+                required: "Poscode is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -174,11 +269,19 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.Postcode?.message}</p>
 
             <label className="form__label">country </label>
             <input
               className="form__input"
               type="text"
+              {...register("Country", {
+                required: "Country is required",
+                minLength: {
+                  value: 4,
+                  message: "must be longer than 4 characters",
+                },
+              })}
               onInput={(event) =>
                 setQueries({
                   ...queries,
@@ -189,24 +292,13 @@ const Form = () => {
                 })
               }
             />
+            <p>{errors.Country?.message}</p>
           </>
         )}
 
-        {/* <label className="form__label">
-    Address Details
-    </label>
-    <textarea rows="7" cols="30" className="form__input" type="text" onInput={(event)=> setQueries({...queries, AddressDetails: event.target.value})} ></textarea>
-
-
-
-
-  
-   
- 
-  <img src={contactImage} className="form__image"/>  */}
+        <img src={contactImage} className="form__image" />
 
         <button type="submit" className="form__submit">
-          
           Submit
         </button>
       </form>
@@ -214,123 +306,3 @@ const Form = () => {
   );
 };
 export default Form;
-// const Form = () => {
-
-//      const [form, setForm] = useState( {
-//       fullName: "",
-//       phoneNumber: "",
-//       email: "",
-//       message: ""
-
-//      });
-//      const handleOnSubmit = (event) => {
-//       event.preventDefault()
-//       fetch("https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit", {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(form)
-//       })
-//       .then((response) => response.json())
-//       .then((json => console.log(json)))
-//       .catch(err => console.log(err))
-//       event.target.reset();
-//     }
-
-//   const initialValues = {
-//       fullName: "",
-//       phoneNumber: "",
-//       email: "",
-//       message: "",
-//     };
-//     validationSchema: Yup.object({
-//       fullName: Yup.string()
-//         .min(5, 'Must be 5 characters or more')
-//         .required('Required'),
-//       phoneNumber: Yup.number()
-//         .max(9, 'Must be 9 characters or less')
-//         .required('Required'),
-//       email: Yup.string().email('Invalid email address').required('Required'),
-//       message: Yup.string()
-//       .min(5, 'Must be 5 characters or more')
-//       .required('Required')
-
-//     }),
-//     onSubmit: (values) => {
-//       alert(JSON.stringify(values, null, 2));
-//     },
-
-//   return (
-//     <div className="page">
-
-//     <form onSubmit={formik.handleSubmit} className="form" onSubmit = {handleOnSubmit}>
-
-//       <label htmlFor="fullName" className="form__label"> Full Name</label>
-//       <input
-//        className="form__input"
-//         id="fullName"
-//         name="fullName"
-//         type="text"
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.fullName}
-//         onInput={(event)=> setForm({...form,  fullName: event.target.value})} />
-//       {formik.touched.fullName && formik.errors.fullName ? (
-//         <div>{formik.errors.fullName}</div>
-//       ) : null}
-
-//       <label htmlFor="email" className="form__label">Email Address</label>
-//       <input
-//         className="form__input"
-//         id="email"
-//         name="email"
-//         type="email"
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.email}
-//         onInput={(event)=> setForm({...form, email: event.target.value})} />
-//       {formik.touched.email && formik.errors.email ? (
-//         <div>{formik.errors.email}</div>
-//       ) : null}
-
-//       <label htmlFor="phoneNumber" className="form__label"> Phone Number </label>
-//       <input
-//         className="form__input"
-//         id="phoneNumber"
-//         name="phoneNumber"
-//         type="number"
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.phoneNumber}
-//         onInput={(event)=> setForm({...form,phoneNumber: event.target.value})}
-//       />
-//       {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
-//         <div>{formik.errors.phoneNumber}</div>
-//       ) : null}
-
-//       <label htmlFor="message" className="form__label">Message </label>
-//       <textarea
-//        className="form__input"
-//         id="message"
-//         name="message"
-//         rows="10"
-
-//         onChange={formik.handleChange}
-//         onBlur={formik.handleBlur}
-//         value={formik.values.message}
-//         onInput={(event)=> setForm({...form, message: event.target.value})}
-//         />
-//       {formik.touched.message && formik.errors.message ? (
-//         <div>{formik.errors.message}</div>
-//       ) : null}
-
-//       <button type="submit">Submit</button>
-
-//     </form>
-
-//     <img src={contactImage} className="form__image"/>
-
-//     </div>
-//   );
-// };

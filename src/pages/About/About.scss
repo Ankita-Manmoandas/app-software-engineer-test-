@@ -1,14 +1,18 @@
+@import "../../assests/sass/variables";
 .about {
-
-
-
   &__text {
     display: block;
     width: 85%;
     margin: auto;
     margin-top: 10%;
- 
   }
-  
+}
 
+@media screen and (min-width: $medium-screen-width) {
+  .about {
+    &__text {
+      margin-top: 5%;
+      font-size: larger;
+    }
+  }
 }
