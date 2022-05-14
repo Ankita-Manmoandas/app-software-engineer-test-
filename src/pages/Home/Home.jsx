@@ -28,7 +28,6 @@ const Home = () => {
         setTitle(imageObject.Details[0].Title);
         setSubTitle(imageObject.Details[2].Subtitle);
         setImgArr(imageObject.Details.map((image) => image.ImageUrl));
-        
       })
       .catch(err => {
         console.log("Error Reading data " + err);
@@ -38,14 +37,9 @@ const Home = () => {
   const textMap = data.map((text,index) => {
     return <>
      {text.title} {text.subtitle} {text.paragraph} </>
-  
-
-    
-
 
   })
  
-
   return (
     <div className="home">
       <Carousel imagesArr={imgArr} title={title} subtitle={subtitle} />
@@ -57,7 +51,9 @@ const Home = () => {
 
       <paragraph className="home__text"> {data[2].title} 
      {data[2].subtitle} {data[2].paragraph}</paragraph>
-     <CTAButton buttonText={"Contact us"} isSecondary={false}/>
+     <div className="home__button--area">
+     <CTAButton buttonText={"Contact us"} isSecondary={false} className="home__button"/>
+     </div>
      
     
 

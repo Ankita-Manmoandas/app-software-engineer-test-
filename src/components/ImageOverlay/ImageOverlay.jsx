@@ -5,9 +5,6 @@ import CTAButton from "../CTAButton/CTAButton";
 const ImageOverlay = props => {
   const {header,paragraph} = props;
   return <div className="overlay">
-  
-
-   
   <img src={backgroundImage} className="overlay__background" /> 
  
   <section className="overlay__shadow">

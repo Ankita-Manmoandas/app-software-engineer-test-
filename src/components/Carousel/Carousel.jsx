@@ -24,21 +24,20 @@ const Carousel = (props) => {
     }
   };
 
+
   return (
     <div className="carousel">
       <div className="carousel__icons">
         <section className ="carousel__overlay">
-      
+        <img src={imagesArr[counter]} alt="" className="carousel__image" />
+
+      <section className="carousel__arrows">
         <img
           src={leftArrow}
           alt="left arrow"
           onClick={handleDecrement}
           className="carousel__arrow carousel__arrow--left"
         />
-        
-
-        <img src={imagesArr[counter]} alt="" className="carousel__image" />
-       
 
         <img
           src={rightArrow}
@@ -46,6 +45,8 @@ const Carousel = (props) => {
           onClick={handleIncrement}
           className="carousel__arrow carousel__arrow--right"
         />
+           </section>
+        
           </section>
       </div>
 

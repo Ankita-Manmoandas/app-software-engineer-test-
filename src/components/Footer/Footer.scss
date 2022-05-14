@@ -1,5 +1,6 @@
+@import "../..//assests/sass/variables";
+
 .footer {
-  
   padding-bottom: 0;
   left: 0;
   bottom: 0;
@@ -8,8 +9,23 @@
   padding-top: 10%;
   text-align: center;
   box-shadow: 10px 10px 10px rgba(black, 0.25);
-  
+
   font-family: "Inv Maison Neue", "Maison Neue";
   font-size: 14px;
   color: #9ca4ab;
+}
+
+@media (min-width: $medium-screen-width) {
+  .footer {
+    margin-top: 5%;
+    padding-top: 5%;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: $large-screen-width) {
+  .footer {
+    margin-top: 0%;
+    font-size: 25px;
+  }
 }

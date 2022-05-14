@@ -7,10 +7,20 @@
     margin: auto;
     margin-top: 10%;
   }
+
+  &__button--area {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__button {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: $medium-screen-width) {
   .home {
+    
     &__text {
       margin-top: 0;
       font-size: larger;
