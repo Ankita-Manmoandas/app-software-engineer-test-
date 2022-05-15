@@ -74,39 +74,44 @@ const Form = () => {
   return (
     <div className="page">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <label className="form__label">Full Name</label>
-        <input
-          className="form__input"
-          type="text"
-          {...register("FullName", {
-            required: " Full name is required",
-            minLength: {
-              value: 4,
-              message: "must be at least 4 characters",
-            },
-          })}
-          onInput={(event) =>
-            setQueries({ ...queries, FullName: event.target.value })
-          }
-        />
-        <p>{errors.FullName?.message}</p>
-
-        <label className="form__label">Email</label>
-        <input
-          className="form__input"
-          type="text"
-          {...register("EmailAddress", {
-            required: "Email is required",
-            minLength: {
-              value: 4,
-              message: "must be at least 4 characters",
-            },
-          })}
-          onInput={(event) =>
-            setQueries({ ...queries, EmailAddress: event.target.value })
-          }
-        />
-        <p>{errors.EmailAddress?.message}</p>
+        <section className="form__flex--labels">
+          <div className="form__flex--unit">
+            <label className="form__label">Full Name</label>
+            <input
+              className="form__input"
+              type="text"
+              {...register("FullName", {
+                required: " Full name is required",
+                minLength: {
+                  value: 4,
+                  message: "must be at least 4 characters",
+                },
+              })}
+              onInput={(event) =>
+                setQueries({ ...queries, FullName: event.target.value })
+              }
+            />
+            <p>{errors.FullName?.message}</p>
+          </div>
+          <div className="form__flex--unit">
+            <label className="form__label">Email</label>
+            <input
+              className="form__input"
+              type="text"
+              {...register("EmailAddress", {
+                required: "Email is required",
+                minLength: {
+                  value: 4,
+                  message: "must be at least 4 characters",
+                },
+              })}
+              onInput={(event) =>
+                setQueries({ ...queries, EmailAddress: event.target.value })
+              }
+            />
+            <p>{errors.EmailAddress?.message}</p>
+          </div>
+        </section>
 
         <label className="form__label">phone Number</label>
         <input
@@ -145,17 +150,20 @@ const Form = () => {
         <p>{errors.Message?.message}</p>
 
         <div className="checkbox">
-        <label htmlFor="myCheck" className="checkbox-label"> Add address?</label>
-        <input
-          type="checkbox"
-          name="myCheck"
-          id="myCheck"
-          onClick={handleCheck}
-          // onClick={() =>
-          //   setQueries({ ...queries, bIncludeAddressDetails: true })
-          // }
-        />
-           </div>
+          <label htmlFor="myCheck" className="checkbox-label">
+            {" "}
+            Add address?
+          </label>
+          <input
+            type="checkbox"
+            name="myCheck"
+            id="myCheck"
+            onClick={handleCheck}
+            // onClick={() =>
+            //   setQueries({ ...queries, bIncludeAddressDetails: true })
+            // }
+          />
+        </div>
 
         {bIncludeAddressDetails && (
           <>

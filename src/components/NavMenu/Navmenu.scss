@@ -43,8 +43,8 @@
     &__content {
       position: absolute;
       border-radius: 10px;
-      width: 35%;
-      height: 30vw;
+      width: 30vw;
+      height: 35vh;
       z-index: 5;
       background-color: $primary-blue;
       justify-content: center;
@@ -61,11 +61,19 @@
   }
 }
 
+@media screen and (min-width: $larger-laptop-screen-width) {
+  .nav-menu {
+    &__content {
+      width: 30%;
+      height: 35vh;
+    }
+  }
+}
 @media screen and (min-width: $monitor-screen-width) {
   .nav-menu {
     &__content {
       width: 30%;
-      height: 25vw;
+      height: 20vh;
     }
 
     &__item {

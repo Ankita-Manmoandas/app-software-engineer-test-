@@ -37,17 +37,19 @@
   }
 }
 
-// @media (min-width: $medium-screen-width) {
-//   .form {
-//     &__image {
-//       width: 70%;
-//       height: auto;
-//       margin: 0%;
-//       margin: 15%;
-//       margin-top: 0%;
-//     }
-//   }
-// }
+@media (min-width: $medium-screen-width) {
+  .form {
+    &__flex--labels {
+      display: flex;
+    }
+    &__flex--unit {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      width: 200px;
+    }
+  }
+}
 
 @media screen and (min-width: $larger-laptop-screen-width) {
   .page {
