@@ -53,7 +53,6 @@ const Form = () => {
   });
 
   const onSubmit = (event) => {
-    //  event.preventDefault();
     fetch(
       "https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit",
       {
@@ -113,7 +112,7 @@ const Form = () => {
           </div>
         </section>
 
-        <label className="form__label">phone Number</label>
+        <label className="form__label">Phone Number</label>
         <input
           className="form__input"
           type="number"
@@ -259,7 +258,7 @@ const Form = () => {
             />
             <p>{errors.State?.message}</p>
 
-            <label className="form__label">postcode </label>
+            <label className="form__label">Postcode </label>
             <input
               className="form__input"
               type="text"
@@ -282,7 +281,7 @@ const Form = () => {
             />
             <p>{errors.Postcode?.message}</p>
 
-            <label className="form__label">country </label>
+            <label className="form__label">Country </label>
             <input
               className="form__input"
               type="text"
