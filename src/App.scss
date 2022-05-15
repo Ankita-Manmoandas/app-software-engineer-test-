@@ -1,6 +1,9 @@
+
+@import "./assests/sass/variables";
+
 .app {
-  font-family: "Inv Maison Neue","Maison Neue";
+  font-family: $primary-font;
   font-size: 15px;
-  
+  color: $primary-font;
   
 }
