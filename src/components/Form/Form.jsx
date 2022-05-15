@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
-import contactImage from "../../assests/images/Img_Contact.png";
+import contactImage from "../../assets/images/Img_Contact.png";
 import CTAButton from "../CTAButton/CTAButton";
 
 

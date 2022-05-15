@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navmenu.scss";
-import blackCross from "../../assests/images/black-cross.png";
+import blackCross from "../../assets/images/black-cross.png";
 
 const Navmenu = (props) => {
   const { toggle } = props;

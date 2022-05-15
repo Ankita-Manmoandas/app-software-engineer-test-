@@ -1,4 +1,4 @@
-import defaultImage from "../../assests/images/shutterstock_696636415.jpg"
+import defaultImage from "../../assets/images/shutterstock_696636415.jpg"
 import "./Image.scss";
 
 const Image = props => {

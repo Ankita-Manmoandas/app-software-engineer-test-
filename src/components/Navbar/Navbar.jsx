@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Navmenu from "../NavMenu/Navmenu";
-import logo from "../../assests/images/Logo.svg"
-import menu from "../../assests/images/menu-icon.png"
+import logo from "../../assets/images/Logo.svg"
+import menu from "../../assets/images/menu-icon.png"
 import "./Navbar.scss"
 
 const Navbar = () => {

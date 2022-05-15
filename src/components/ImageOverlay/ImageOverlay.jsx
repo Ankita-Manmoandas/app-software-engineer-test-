@@ -1,5 +1,5 @@
 
-import backgroundImage from "../../assests/images/shutterstock_1302552622.jpg"
+import backgroundImage from "../../assets/images/shutterstock_1302552622.jpg"
 import "./ImageOverlay.scss"
 import CTAButton from "../CTAButton/CTAButton";
 const ImageOverlay = props => {
