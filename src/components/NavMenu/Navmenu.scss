@@ -35,13 +35,41 @@
 
 @media screen and (min-width: $laptop-screen-width) {
   .nav-menu {
+    background-color: rgba(black, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &__content {
-      font-size: 30px;
+      position: absolute;
+      border-radius: 10px;
+      width: 35%;
+      height: 30vw;
+      z-index: 5;
+      background-color: $primary-blue;
+      justify-content: center;
     }
 
     &__item {
       font-size: 30px;
       color: $primary-white;
+    }
+
+    &__button {
+      margin-top: 10%;
+    }
+  }
+}
+
+@media screen and (min-width: $monitor-screen-width) {
+  .nav-menu {
+    &__content {
+      width: 30%;
+      height: 25vw;
+    }
+
+    &__item {
+      font-size: 50px;
     }
   }
 }

@@ -144,7 +144,8 @@ const Form = () => {
         ></textarea>
         <p>{errors.Message?.message}</p>
 
-        <label htmlFor="myCheck"> Add address?</label>
+        <div className="checkbox">
+        <label htmlFor="myCheck" className="checkbox-label"> Add address?</label>
         <input
           type="checkbox"
           name="myCheck"
@@ -154,6 +155,7 @@ const Form = () => {
           //   setQueries({ ...queries, bIncludeAddressDetails: true })
           // }
         />
+           </div>
 
         {bIncludeAddressDetails && (
           <>

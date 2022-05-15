@@ -79,3 +79,22 @@
     }
   }
 }
+
+@media screen and (min-width: $monitor-screen-width) {
+  .home {
+    font-size: 30px;
+
+    &__flex {
+      margin-bottom: -15%;
+    }
+
+    &__text {
+      margin-top: 5%;
+    }
+
+    &__title {
+      margin-top: -12%;
+      font-size: 45px;
+    }
+  }
+}

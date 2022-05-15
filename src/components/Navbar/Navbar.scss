@@ -27,7 +27,6 @@
 @media screen and (min-width: $laptop-screen-width) {
   .nav {
     margin: 30px;
-
     &__item {
       width: 30px;
       height: auto;
@@ -36,4 +35,19 @@
   .logo {
     width: 15%;
   }
+}
+
+@media screen and (min-width: $monitor-screen-width) {
+  .nav {
+    margin: 30px;
+    &__item {
+      width: 50px;
+      height: auto;
+    }
+  }
+  .logo {
+    width: 18%;
+  }
+  
+
 }

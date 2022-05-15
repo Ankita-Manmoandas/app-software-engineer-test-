@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navmenu.scss";
 import blackCross from "../../assets/images/black-cross.png";
-
+import CTAButton from "../CTAButton/CTAButton";
 const Navmenu = (props) => {
   const { toggle } = props;
 
@@ -10,7 +10,7 @@ const Navmenu = (props) => {
     <div className="nav-menu">
       <div className="nav-menu__content">
         <img src={blackCross} onClick={toggle} className="cross" />
-        <Link to="" className="nav-menu__item" onClick={toggle}>
+        <Link to="/" className="nav-menu__item" onClick={toggle}>
           Home
         </Link>
         <Link to="/about" className="nav-menu__item" onClick={toggle}>
@@ -19,6 +19,7 @@ const Navmenu = (props) => {
         <Link to="/contact" className="nav-menu__item" onClick={toggle}>
           Contact
         </Link>
+        <CTAButton buttonText={"Log in"} isSecondary={true} className= "nav-menu__button"/>
       </div>
     </div>
   );

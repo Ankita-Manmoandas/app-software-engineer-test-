@@ -111,3 +111,19 @@
     }
   }
 }
+
+@media screen and (min-width: $monitor-screen-width) {
+  .overlay {
+    &__background {
+      transform: scale(1, 0.5);
+    }
+
+    &__shadow {
+      width: 30%;
+      min-height: 15%;
+      font-size: 28px;
+      right: 800px;
+      padding: 2%;
+    }
+  }
+}

@@ -31,3 +31,19 @@
     }
   }
 }
+
+@media screen and (min-width: $monitor-screen-width) {
+  .about {
+    margin: 5%;
+    padding-bottom: 10%;
+
+    &__text {
+      margin-top: 10px;
+      font-size: 36px;
+    }
+
+    &__image {
+      transform: scale(0.5, 0.9);
+    }
+  }
+}
