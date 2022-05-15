@@ -49,24 +49,88 @@
   .overlay {
     margin-top: 0%;
     padding-bottom: 0%;
+    padding: 0%;
+
 
     &__background {
-      transform: scale(1, 0.7);
+      transform: scale(1, 0.8);
       object-fit: cover;
       width: 100%;
+      padding-bottom: 0%;
+      border: 2px solid pink;
+      
+      
     }
 
     &__shadow {
       bottom: 0;
       min-height: 40%;
+      font-size: larger;
+     
     }
   }
 }
 
-@media screen and(min-width:$large-screen-width) {
+
+@media screen and (min-width: $laptop-screen-width) {
   .overlay {
+
+    &__background {
+      overflow-y: visible;
+      transform: scale(1, 0.6);
+      object-fit: cover;
+      width: 100%;
+    }
+ 
+
+     &__text--area{
+     
+     }
+
     &__shadow {
-      font-size: larger;
+      width: 40%;
+      min-height: 30%;
+      font-size: 18px;
+      left: -650px;
+      padding-top: 2%;
+      padding-bottom: 5%;
+
     }
   }
 }
+
+
+
+
+
+@media screen and (min-width: $larger-laptop-screen-width) {
+  .overlay {
+
+
+    &__background {
+      overflow-y: visible;
+      transform: scale(1, 0.4);
+      object-fit: cover;
+      width: 100%;
+    }
+ 
+
+     &__text--area{
+     
+     }
+
+    &__shadow {
+      width: 40%;
+      min-height: 20%;
+      font-size: 17px;
+      left: -700px;
+     padding: 2%;
+   
+
+    }
+  }
+}
+
+
+
+

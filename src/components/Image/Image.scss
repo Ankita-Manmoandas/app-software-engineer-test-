@@ -2,12 +2,18 @@
 @import "../../assests/sass/variables";
 
 
-.Image-border{
+.Image-border {
   display: flex;
   justify-content: center;
 
 
-  &__unit {
+  &__unit__home{
+    display: block;
+      width: 80%;
+      padding: 10%;
+
+  }
+  &__unit__about{
     display: block;
       width: 80%;
       padding: 10%;
@@ -20,13 +26,36 @@
    
   
   
-    &__unit {
-      width: 70%;
-     
-        padding-top: 5%;
+    &__unit__home{
+
+        width: 70%;
+        padding: 5%;
+  
+    }
+    &__unit__about{
+   
+        width: 70%;
+        padding: 5%;
   
     }
   }
 
 
 }
+
+@media screen and (min-width: $laptop-screen-width) {
+  .Image-border{
+    &__unit__home{
+
+        width: 95%;
+ 
+  
+    }
+    &__unit__about{
+
+        width: 50%;
+
+  
+    }
+
+}}

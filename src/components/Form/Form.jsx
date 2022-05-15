@@ -75,6 +75,7 @@ const Form = () => {
   return (
     <div className="page">
      
+     
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <label className="form__label">Full Name</label>
         <input

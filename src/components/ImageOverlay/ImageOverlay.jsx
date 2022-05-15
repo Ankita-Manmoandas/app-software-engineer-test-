@@ -6,13 +6,15 @@ const ImageOverlay = props => {
   const {header,paragraph} = props;
   return <div className="overlay">
   <img src={backgroundImage} className="overlay__background" /> 
- 
-  <section className="overlay__shadow">
+ <div className="overlay__text--area" >
+
+  <div className="overlay__shadow">
   <h3 className="overlay__header"> {header}</h3>
   <p className="overlay__paragraph">{paragraph} </p>
   <CTAButton buttonText={"Log in"} isSecondary={true}/>
   
-  </section>
+  </div>
+  </div>
   </div>
 }
 

@@ -16,3 +16,24 @@
     }
   }
 }
+
+
+@media screen and (min-width: $laptop-screen-width) {
+  .about {
+    margin: 5%;
+
+    
+    &__text {
+      margin-top: 10px;
+      font-size: larger;
+    }
+
+    &__image {
+      transform: scale(0.5,0.8);
+
+    
+
+    }
+  }
+}
+

@@ -1,3 +1,5 @@
+@import "../../assests/sass/variables";
+
 .nav-menu {
   position: fixed;
   z-index: 5;
@@ -15,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     font-size: 25px;
+  
   }
 
   &__item {
@@ -29,4 +32,17 @@
   right: 5px;
   top: 5px;
   height: 25px;
+}
+
+
+@media screen and (min-width: $laptop-screen-width) {
+  .nav-menu {
+    
+  
+    &__content {
+     
+      font-size: 30px;
+    }
+
+}
 }

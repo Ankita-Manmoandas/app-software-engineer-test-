@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import Carousel from "../../components/Carousel/Carousel";
 import Image from "../../components/Image/Image";
 import data from "../../data/text";
@@ -43,16 +42,33 @@ const Home = () => {
   return (
     <div className="home">
       <Carousel imagesArr={imgArr} title={title} subtitle={subtitle} />
-      <Image /> 
-      <paragraph className="home__text"> {data[0].title} 
-     {data[0].subtitle} {data[0].paragraph}</paragraph>
+      <section className="home__flex">
+      <Image className="home__image" isHome={true}/>
+      <div className="home__flextext">
+      <h4 className="home__text">{data[0].title}</h4>
+      <p className="home__text">  
+     {data[0].subtitle} {data[0].paragraph}</p>
+     <div className="home__button--area">
+     <CTAButton buttonText={"Learn more"} isSecondary={false} className="home__button"/>
+     </div> 
+     </div>
+     </section>
 
       <ImageOverlay  header = {data[1].title} paragraph= {data[1].paragraph} />
+      <section className="home__title">
+      <h5> {data[2].title} </h5>
+      <h6>{data[2].subtitle}</h6>
+      
+     </section>
 
-      <paragraph className="home__text"> {data[2].title} 
-     {data[2].subtitle} {data[2].paragraph}</paragraph>
+     <section className="home__columns">
+
+      <p className="home__text"> {data[2].paragraph}</p>
+      </section>
+
      <div className="home__button--area">
      <CTAButton buttonText={"Contact us"} isSecondary={false} className="home__button"/>
+ 
      </div>
      
     

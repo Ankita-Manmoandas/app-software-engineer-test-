@@ -1,6 +1,11 @@
+@import "../../assests/sass/variables";
+
 .page {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
 }
 
 .form {
@@ -30,4 +35,38 @@
     height: 500px;
     margin: 10%;
   }
+}
+
+// @media (min-width: $medium-screen-width) {
+//   .form {
+//     &__image {
+//       width: 70%;
+//       height: auto;
+//       margin: 0%;
+//       margin: 15%;
+//       margin-top: 0%;
+//     }
+//   }
+// }
+
+
+@media screen and (min-width: $larger-laptop-screen-width) {
+  .page {
+    padding-bottom: 20%;
+
+    justify-content: space-evenly;
+  }
+
+  .form {
+ 
+   
+    
+    &__image {
+      width: 90%;
+      height: 120%;
+      margin-top: -10%;
+      overflow-y: hidden;
+    }
+  }
+
 }

@@ -1,38 +1,101 @@
 @import "../../assests/sass/variables";
 
 .home {
+  &__title {
+  margin: 5%;
+text-align: center;
+
+  }
   &__text {
     display: block;
     width: 85%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   &__button--area {
-    display: flex;
-    justify-content: space-around;
+    
   }
 
   &__button {
-    width: auto;
+    
   }
 }
 
 @media screen and (min-width: $medium-screen-width) {
   .home {
+    &__title {
+     font-size: 22px;
+     margin-top: 0%;
+     padding-top: 0%;
+      }
     
     &__text {
-      margin-top: 0;
-      font-size: larger;
+      margin-top: 0%;
+      
     }
   }
 }
 
-@media screen and (min-width: $large-screen-width) {
+
+
+@media screen and (min-width: $laptop-screen-width) {
   .home {
-    &__text {
-      margin-top: 0;
-      font-size: x-large;
+
+
+    &__flex {
+      padding: 5%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      // border: 2px solid black;
     }
-  }
-}
+    &__image {
+      width: 90%;
+      height: 90%;
+    }
+     
+    &__text {
+      margin-top: 5%;
+      
+    }
+    &__columns {
+      column-count: 3;
+    
+
+    }
+
+    &__button--area {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    }
+   
+
+
+  }}
+
+
+  @media screen and (min-width: $larger-laptop-screen-width) {
+    .home {
+      font-size: larger;
+
+      &__flex {
+        margin-bottom: -20%;
+      }
+  
+       
+      &__text {
+        margin-top: 5%;
+        
+      }
+     
+       &__title{
+       
+         margin-top: -15%;
+       }
+
+  
+  
+    }}
+  
