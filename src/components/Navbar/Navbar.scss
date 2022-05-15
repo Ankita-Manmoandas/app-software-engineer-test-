@@ -1,49 +1,39 @@
-
 @import "../../assets/sass/variables";
 
 .nav {
- display: flex;
- justify-content: space-between;
- margin: 5%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
 
- &__item{
-   width: 10%;
- }
+  &__item {
+    width: 10%;
+  }
 }
 .logo {
   width: 40%;
 }
 
-
-@media screen  and (min-width: $medium-screen-width) {
+@media screen and (min-width: $medium-screen-width) {
   .nav {
-   
     &__item {
       width: 5%;
     }
-   }
-   .logo {
-     width: 25%;
-   }
-   
-
-
-  
+  }
+  .logo {
+    width: 25%;
+  }
 }
-
 
 @media screen and (min-width: $laptop-screen-width) {
   .nav {
     margin: 30px;
-   
+
     &__item {
       width: 30px;
       height: auto;
     }
-   }
-   .logo {
-     width: 15%;
-   }
-   
-
   }
+  .logo {
+    width: 15%;
+  }
+}

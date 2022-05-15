@@ -1,10 +1,7 @@
-
-
 @import "../../assets/sass/variables";
 
 .buttons {
   display: flex;
-
 }
 .button {
   min-width: 70%;
@@ -16,9 +13,6 @@
 .primary {
   background-color: $primary-blue;
   color: whitesmoke;
- 
-
-  
 }
 
 .secondary {
@@ -26,12 +20,8 @@
   color: #307bb9;
 }
 
-
-@media screen  and (min-width:$medium-screen-width) {
+@media screen and (min-width: $medium-screen-width) {
   .button {
     font-size: larger;
-  
   }
-
-
 }

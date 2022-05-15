@@ -4,7 +4,6 @@ import "./Form.scss";
 import contactImage from "../../assets/images/Img_Contact.png";
 import CTAButton from "../CTAButton/CTAButton";
 
-
 const Form = () => {
   const [bIncludeAddressDetails, showbIncludeAddressDetails] = useState(false);
   const {
@@ -74,8 +73,6 @@ const Form = () => {
 
   return (
     <div className="page">
-     
-     
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <label className="form__label">Full Name</label>
         <input
@@ -299,16 +296,12 @@ const Form = () => {
             <p>{errors.Country?.message}</p>
           </>
         )}
-    
-    <CTAButton buttonText={"submit"} isSecondary={false}/>
+
+        <CTAButton buttonText={"submit"} isSecondary={false} />
       </form>
-      <div> 
-
-        
-
-<img src={contactImage} className="form__image"/>
-</div>
-
+      <div>
+        <img src={contactImage} className="form__image" />
+      </div>
     </div>
   );
 };

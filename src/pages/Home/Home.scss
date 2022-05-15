@@ -2,9 +2,8 @@
 
 .home {
   &__title {
-  margin: 5%;
-text-align: center;
-
+    margin: 5%;
+    text-align: center;
   }
   &__text {
     display: block;
@@ -14,35 +13,28 @@ text-align: center;
   }
 
   &__button--area {
-    
   }
 
   &__button {
-    
   }
 }
 
 @media screen and (min-width: $medium-screen-width) {
   .home {
     &__title {
-     font-size: 22px;
-     margin-top: 0%;
-     padding-top: 0%;
-      }
-    
+      font-size: 22px;
+      margin-top: 0%;
+      padding-top: 0%;
+    }
+
     &__text {
       margin-top: 0%;
-      
     }
   }
 }
 
-
-
 @media screen and (min-width: $laptop-screen-width) {
   .home {
-
-
     &__flex {
       padding: 5%;
       display: flex;
@@ -54,48 +46,36 @@ text-align: center;
       width: 90%;
       height: 90%;
     }
-     
+
     &__text {
       margin-top: 5%;
-      
     }
     &__columns {
       column-count: 3;
-    
-
     }
 
     &__button--area {
-    margin-top: 55px;
-    display: flex;
-    justify-content: center;
+      margin-top: 55px;
+      display: flex;
+      justify-content: center;
     }
-   
+  }
+}
 
+@media screen and (min-width: $larger-laptop-screen-width) {
+  .home {
+    font-size: larger;
 
-  }}
+    &__flex {
+      margin-bottom: -20%;
+    }
 
+    &__text {
+      margin-top: 5%;
+    }
 
-  @media screen and (min-width: $larger-laptop-screen-width) {
-    .home {
-      font-size: larger;
-
-      &__flex {
-        margin-bottom: -20%;
-      }
-  
-       
-      &__text {
-        margin-top: 5%;
-        
-      }
-     
-       &__title{
-       
-         margin-top: -15%;
-       }
-
-  
-  
-    }}
-  
+    &__title {
+      margin-top: -15%;
+    }
+  }
+}

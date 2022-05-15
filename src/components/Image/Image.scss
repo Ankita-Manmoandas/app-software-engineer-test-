@@ -1,61 +1,41 @@
-
 @import "../../assets/sass/variables";
-
 
 .Image-border {
   display: flex;
   justify-content: center;
 
-
-  &__unit__home{
+  &__unit__home {
     display: block;
-      width: 80%;
-      padding: 10%;
-
+    width: 80%;
+    padding: 10%;
   }
-  &__unit__about{
+  &__unit__about {
     display: block;
-      width: 80%;
-      padding: 10%;
-
+    width: 80%;
+    padding: 10%;
   }
 }
 
-@media screen  and (min-width: $medium-screen-width) {
-  .Image-border{
-   
-  
-  
-    &__unit__home{
-
-        width: 70%;
-        padding: 5%;
-  
+@media screen and (min-width: $medium-screen-width) {
+  .Image-border {
+    &__unit__home {
+      width: 70%;
+      padding: 5%;
     }
-    &__unit__about{
-   
-        width: 70%;
-        padding: 5%;
-  
+    &__unit__about {
+      width: 70%;
+      padding: 5%;
     }
   }
-
-
 }
 
 @media screen and (min-width: $laptop-screen-width) {
-  .Image-border{
-    &__unit__home{
-
-        width: 95%;
- 
-  
+  .Image-border {
+    &__unit__home {
+      width: 95%;
     }
-    &__unit__about{
-
-        width: 50%;
-
-  
+    &__unit__about {
+      width: 50%;
     }
-
-}}
+  }
+}

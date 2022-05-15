@@ -3,7 +3,7 @@
 .nav-menu {
   position: fixed;
   z-index: 5;
-  background-color:$primary-blue;
+  background-color: $primary-blue;
   top: 0;
   left: 0;
   right: 0;
@@ -17,15 +17,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-  
   }
 
   &__item {
     font-size: 22px;
     text-decoration: none;
     padding-top: 20px;
-
   }
 }
 
@@ -36,21 +33,15 @@
   height: 25px;
 }
 
-
 @media screen and (min-width: $laptop-screen-width) {
   .nav-menu {
-    
-  
     &__content {
-     
       font-size: 30px;
     }
 
     &__item {
       font-size: 30px;
-      color:$primary-white;
-  
+      color: $primary-white;
     }
-
-}
+  }
 }

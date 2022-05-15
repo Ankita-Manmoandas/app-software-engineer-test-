@@ -24,37 +24,34 @@ const Carousel = (props) => {
     }
   };
 
-
   return (
     <div className="carousel">
       <div className="carousel__icons">
-        <section className ="carousel__overlay">
-        <img src={imagesArr[counter]} alt="" className="carousel__image" />
+        <section className="carousel__overlay">
+          <img src={imagesArr[counter]} alt="" className="carousel__image" />
 
-      <section className="carousel__arrows">
-        <img
-          src={leftArrow}
-          alt="left arrow"
-          onClick={handleDecrement}
-          className="carousel__arrow carousel__arrow--left"
-        />
+          <section className="carousel__arrows">
+            <img
+              src={leftArrow}
+              alt="left arrow"
+              onClick={handleDecrement}
+              className="carousel__arrow carousel__arrow--left"
+            />
 
-        <img
-          src={rightArrow}
-          alt="right arrow"
-          onClick={handleIncrement}
-          className="carousel__arrow carousel__arrow--right"
-        />
-           </section>
-        
+            <img
+              src={rightArrow}
+              alt="right arrow"
+              onClick={handleIncrement}
+              className="carousel__arrow carousel__arrow--right"
+            />
           </section>
+        </section>
       </div>
 
       <div className="carousel__text">
         <h2 className="carousel__centered">{title}</h2>
         <h4 className="carousel__centered">{subtitle}</h4>
-        <CTAButton buttonText={"Contact us"} isSecondary={false}/>
-
+        <CTAButton buttonText={"Contact us"} isSecondary={false} />
       </div>
     </div>
   );

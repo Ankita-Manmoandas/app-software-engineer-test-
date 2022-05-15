@@ -11,7 +11,7 @@ const About = () => {
       <h3 className="about__text"> {data[1].title} </h3>
       <p className="about__text"> {data[1].paragraph}</p>
       <p className="about__text">{data[1].paragraph}</p>
-      <Image lassName="about__image" isHome={false}/>
+      <Image lassName="about__image" isHome={false} />
       <p className="about__text">{data[0].subtitle}</p>
       <p className="about__text">{data[0].paragraph}</p>
       <p className="about__text">{data[1].paragraph}</p>

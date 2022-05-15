@@ -1,29 +1,23 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Navmenu from "../NavMenu/Navmenu";
-import logo from "../../assets/images/Logo.svg"
-import menu from "../../assets/images/menu-icon.png"
-import "./Navbar.scss"
+import logo from "../../assets/images/Logo.svg";
+import menu from "../../assets/images/menu-icon.png";
+import "./Navbar.scss";
 
 const Navbar = () => {
+  const [setNav, setShowNav] = useState(false);
+  const toggleFunc = () => {
+    setShowNav(!setNav);
+  };
 
-  const [setNav, setShowNav] = useState(false); 
-  const toggleFunc= () => {
-    setShowNav(!setNav)
-  }
+  return (
+    <nav className="nav">
+      <img src={logo} className="nav__item logo" />
+      <img src={menu} className="nav__item" onClick={toggleFunc} />
 
-  return <nav className="nav" >
-    <img src= {logo} className="nav__item logo"/>
-    <img src= {menu} className="nav__item" onClick={toggleFunc} />
+      {setNav && <Navmenu toggle={toggleFunc}></Navmenu>}
+    </nav>
+  );
+};
 
-    {setNav && 
-    <Navmenu toggle = {toggleFunc}></Navmenu>}
-    
-    
-
-    
-
-  </nav>
-
-}
-
-export default Navbar; 
+export default Navbar;

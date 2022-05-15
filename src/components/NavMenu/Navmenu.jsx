@@ -16,11 +16,7 @@ const Navmenu = (props) => {
         <Link to="/about" className="nav-menu__item" onClick={toggle}>
           About
         </Link>
-        <Link
-          to="/contact"
-          className="nav-menu__item"
-          onClick={toggle}
-        >
+        <Link to="/contact" className="nav-menu__item" onClick={toggle}>
           Contact
         </Link>
       </div>

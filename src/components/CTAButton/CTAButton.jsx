@@ -1,7 +1,7 @@
 import React from "react";
-import "./CTAButton.scss"
+import "./CTAButton.scss";
 
-const CTAButton = props => {
+const CTAButton = (props) => {
   const { buttonText, isSecondary } = props;
 
   let buttonStyle = "button";
@@ -12,10 +12,11 @@ const CTAButton = props => {
     buttonStyle += " primary";
   }
 
-  return <div className="buttons">
+  return (
+    <div className="buttons">
+      <button className={buttonStyle}>{buttonText}</button>
+    </div>
+  );
+};
 
- <button className={buttonStyle}>{buttonText}</button>
- </div>
-}
-
-export default CTAButton; 
+export default CTAButton;
