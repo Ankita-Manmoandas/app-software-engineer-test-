@@ -8,6 +8,7 @@
   margin: auto;
   padding: 10px 20px;
   border: none;
+  font-family: $primary-font;
 }
 
 .primary {
@@ -18,7 +19,6 @@
 .secondary {
   background-color: whitesmoke;
   color: #307bb9;
-
 }
 
 @media screen and (min-width: $medium-screen-width) {
@@ -27,19 +27,13 @@
   }
 }
 
-
 @media screen and (min-width: $monitor-screen-width) {
   .buttons {
-  
   }
   .button {
     min-width: 70%;
-    margin: auto;
     padding: 15px 30px;
     border: none;
     font-size: 31px;
-    
   }
-
-
 }

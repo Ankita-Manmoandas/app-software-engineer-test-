@@ -36,15 +36,14 @@
 @media screen and (min-width: $laptop-screen-width) {
   .home {
     &__flex {
-      padding: 5%;
+      margin-top: 2%;
+      margin-left: 5%;
+      padding: 20px;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-around;
+
       // border: 2px solid black;
-    }
-    &__image {
-      width: 90%;
-      height: 90%;
     }
 
     &__text {
@@ -55,37 +54,52 @@
     }
 
     &__button--area {
-      margin-top: 55px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 5%;
+    }
+    &__button--center {
       display: flex;
       justify-content: center;
+      padding-top: 20px;
     }
   }
 }
 
 @media screen and (min-width: $larger-laptop-screen-width) {
   .home {
-    font-size: larger;
+    font-size: 15px;
 
     &__flex {
       margin-bottom: -20%;
     }
+    &__flextext {
+      display: flex;
+      flex-direction: column;
+      height: min-content;
+    }
 
     &__text {
       margin-top: 5%;
+      margin-bottom: 0;
     }
 
     &__title {
-      margin-top: -15%;
+      margin-top: -18%;
     }
   }
 }
 
 @media screen and (min-width: $monitor-screen-width) {
   .home {
-    font-size: 30px;
+    font-size: 28px;
 
     &__flex {
       margin-bottom: -15%;
+    }
+    &__flextext {
+      width: 90%;
     }
 
     &__text {

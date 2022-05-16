@@ -18,10 +18,10 @@ const Navmenu = (props) => {
           Home
         </Link>
         <Link to="/about" className="nav-menu__item" onClick={toggle}>
-          About
+          About us
         </Link>
         <Link to="/contact" className="nav-menu__item" onClick={toggle}>
-          Contact
+          Contact us
         </Link>
         <CTAButton
           buttonText={"Log in"}

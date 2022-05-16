@@ -69,7 +69,7 @@ const Home = () => {
         <p className="home__text"> {data[2].paragraph}</p>
       </section>
 
-      <div className="home__button--area">
+      <div className="home__button--center">
         <CTAButton
           buttonText={"Contact us"}
           isSecondary={false}
